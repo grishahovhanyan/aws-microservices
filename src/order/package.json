@@ -1,0 +1,9 @@
+{
+  "name": "@src/order",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.535.0",
+    "@aws-sdk/util-dynamodb": "^3.535.0"
+  }
+}
