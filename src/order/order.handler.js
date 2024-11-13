@@ -1,8 +1,6 @@
-import { response200, response201, response404 } from '../constants'
+import { response200, response201 } from '../constants'
 
-import { OrderSerivce } from './order.service'
-
-const orderService = new OrderSerivce()
+import { orderService } from './order.service'
 
 export class OrderHandler {
   async getAll() {
@@ -25,3 +23,5 @@ export class OrderHandler {
     return response201(order)
   }
 }
+
+export const orderHandler = new OrderHandler()

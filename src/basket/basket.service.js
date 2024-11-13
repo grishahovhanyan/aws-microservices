@@ -79,3 +79,5 @@ export class BasketService {
     return checkoutPaylod
   }
 }
+
+export const basketService = new BasketService()

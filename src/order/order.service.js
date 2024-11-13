@@ -4,7 +4,7 @@ import { ddbClient } from './ddbClient'
 
 const ORDER_TABLE_NAME = process.env.ORDER_TABLE_NAME
 
-export class OrderSerivce {
+export class OrderService {
   async getAll() {
     const scanCommandInput = {
       TableName: ORDER_TABLE_NAME
@@ -68,3 +68,5 @@ export class OrderSerivce {
     }
   }
 }
+
+export const orderService = new OrderService()

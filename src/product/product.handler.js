@@ -1,7 +1,5 @@
 import { SUCCESS_RESPONSE, response200, response201, response404 } from '../constants'
-import { ProductService } from './product.service'
-
-const productService = new ProductService()
+import { productService } from './product.service'
 
 export class ProductHandler {
   async getAll(getAllInput) {
@@ -49,3 +47,5 @@ export class ProductHandler {
     return response200(SUCCESS_RESPONSE)
   }
 }
+
+export const productHandler = new ProductHandler()

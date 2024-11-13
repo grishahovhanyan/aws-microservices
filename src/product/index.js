@@ -1,8 +1,6 @@
 import { HTTP_METHODS, HTTP_STATUS_CODES, httpResponse } from '../constants'
 
-import { ProductHandler } from './product.handler'
-
-const productHandler = new ProductHandler()
+import { productHandler } from './product.handler'
 
 exports.handler = async (event) => {
   console.log(`Product Microservice. Request URL: ${event.path}`)

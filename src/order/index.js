@@ -1,8 +1,6 @@
 import { HTTP_METHODS, HTTP_STATUS_CODES, httpResponse } from '../constants'
 
-import { OrderHandler } from './order.handler'
-
-const orderHandler = new OrderHandler()
+import { orderHandler } from './order.handler'
 
 export async function handler(event) {
   if (event.Records) {

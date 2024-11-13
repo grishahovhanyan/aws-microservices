@@ -19,7 +19,7 @@ export class ProductService {
     }
 
     const { Count, Items } = await ddbClient.send(new ScanCommand(scanCommandInput))
-    console.log(Items, '<=====items get all')
+
     return {
       count: Count,
       results: Items.map(item => unmarshall(item))
@@ -33,10 +33,9 @@ export class ProductService {
       ExpressionAttributeNames: { '#productId': 'id' },
       ExpressionAttributeValues: marshall({ ':productIds': productIds })
     }
-    console.log(marshall({ ':productIds': productIds }))
+
     const { Count, Items } = await ddbClient.send(new ScanCommand(scanCommandInput))
 
-    console.log(Items, '<===items')
     return {
       count: Count,
       results: Items.map(item => unmarshall(item))
@@ -99,3 +98,5 @@ export class ProductService {
     return await ddbClient.send(new DeleteItemCommand(deleteCommandInput))
   }
 }
+
+export const productService = new ProductService()

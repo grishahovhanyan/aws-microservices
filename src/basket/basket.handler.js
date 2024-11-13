@@ -1,9 +1,6 @@
 import { SUCCESS_RESPONSE, response200, response201, response404 } from '../constants'
-import { ProductService } from '../product/product.service'
-import { BasketService } from './basket.service'
-
-const productService = new ProductService
-const basketService = new BasketService()
+import { productService } from '../product/product.service'
+import { basketService } from './basket.service'
 
 export class BasketHandler {
   async getAll() {
@@ -92,3 +89,5 @@ export class BasketHandler {
     return response200(checkoutPaylod)
   }
 }
+
+export const basketHandler = new BasketHandler()

@@ -1,12 +1,9 @@
 import { HTTP_METHODS, HTTP_STATUS_CODES, httpResponse } from '../constants'
 
-import { BasketHandler } from './basket.handler'
-
-const basketHandler = new BasketHandler()
+import { basketHandler } from './basket.handler'
 
 exports.handler = async (event) => {
   console.log(`Basket Microservice. Request URL: ${event.path}`)
-
 
   try {
     // { statusCode: number, body: Object }
